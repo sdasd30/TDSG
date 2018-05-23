@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Manager\AnimatorSprite.cs" />
      <Compile Include="Assets\Scripts\Player\MvmtAim.cs" />
      <Compile Include="Assets\Scripts\Player\MvmtBody.cs" />
  <Reference Include="UnityEngine.UI">
