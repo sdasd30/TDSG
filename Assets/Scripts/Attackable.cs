@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent (typeof (BoxCollider2D))]
 public class Attackable : MonoBehaviour {
-	public float maxHP;
+	public float maxHP = 1;
 	public bool allied;
 	public bool anarchy;
 	float hp;

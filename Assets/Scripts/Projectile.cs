@@ -29,14 +29,16 @@ public class Projectile : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 		if (other.gameObject.GetComponent<Attackable> () != null) {
-			Destroy (this.gameObject);
 			Attackable a = other.gameObject.GetComponent<Attackable> ();
 			if (a.anarchy) {
 				a.TakeDamage (damage);
+				Destroy (this.gameObject);
 			} else if (isAllied && !a.allied) {
 				a.TakeDamage (damage);
+				Destroy (this.gameObject);
 			} else if (!isAllied && a.allied) {
 				a.TakeDamage (damage);
+				Destroy (this.gameObject);
 			}
 		}
 	}
