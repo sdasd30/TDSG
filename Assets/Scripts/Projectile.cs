@@ -25,13 +25,19 @@ public class Projectile : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.GetComponent<Solid> () != null) {
+			Destroy (this.gameObject);
+		}
 		if (other.gameObject.GetComponent<Attackable> () != null) {
 			Destroy (this.gameObject);
 			Attackable a = other.gameObject.GetComponent<Attackable> ();
-			a.TakeDamage (damage);
-		}
-		else if (other.gameObject.GetComponent<Solid> () != null) {
-			Destroy (this.gameObject);
+			if (a.anarchy) {
+				a.TakeDamage (damage);
+			} else if (isAllied && !a.allied) {
+				a.TakeDamage (damage);
+			} else if (!isAllied && a.allied) {
+				a.TakeDamage (damage);
+			}
 		}
 	}
 }

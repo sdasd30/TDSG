@@ -53,11 +53,15 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Attackable.cs" />
      <Compile Include="Assets\Scripts\Manager\AnimatorSprite.cs" />
+     <Compile Include="Assets\Scripts\PkUpWeapon.cs" />
      <Compile Include="Assets\Scripts\Player\MvmtAim.cs" />
      <Compile Include="Assets\Scripts\Player\MvmtBody.cs" />
      <Compile Include="Assets\Scripts\Player\Shoot.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Solid.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponAmmo.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponImage.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponName.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

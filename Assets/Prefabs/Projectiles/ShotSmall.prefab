@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 2
+  damage: 10
   isAllied: 1
   anarchy: 0
 --- !u!212 &212300366004312138

@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof (BoxCollider2D))]
 public class Attackable : MonoBehaviour {
 	public float maxHP;
+	public bool allied;
+	public bool anarchy;
 	float hp;
 	// Use this for initialization
 	void Start () {
