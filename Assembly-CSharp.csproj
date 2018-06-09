@@ -52,13 +52,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Attackable.cs" />
+     <Compile Include="Assets\Scripts\CreatesDebris.cs" />
      <Compile Include="Assets\Scripts\Manager\AnimatorSprite.cs" />
+     <Compile Include="Assets\Scripts\PkUpRegular.cs" />
      <Compile Include="Assets\Scripts\PkUpWeapon.cs" />
      <Compile Include="Assets\Scripts\Player\MvmtAim.cs" />
      <Compile Include="Assets\Scripts\Player\MvmtBody.cs" />
      <Compile Include="Assets\Scripts\Player\Shoot.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Scatter.cs" />
      <Compile Include="Assets\Scripts\Solid.cs" />
+     <Compile Include="Assets\Scripts\ThisWeapon.cs" />
      <Compile Include="Assets\Scripts\TurretEnemy.cs" />
      <Compile Include="Assets\Scripts\TurretFire.cs" />
      <Compile Include="Assets\Scripts\UI\WeaponAmmo.cs" />
