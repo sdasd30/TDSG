@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Manager\AnimatorSprite.cs" />
      <Compile Include="Assets\Scripts\PkUpRegular.cs" />
      <Compile Include="Assets\Scripts\PkUpWeapon.cs" />
+     <Compile Include="Assets\Scripts\Player\CurrentWeapon.cs" />
      <Compile Include="Assets\Scripts\Player\MvmtAim.cs" />
      <Compile Include="Assets\Scripts\Player\MvmtBody.cs" />
      <Compile Include="Assets\Scripts\Player\Shoot.cs" />
@@ -65,9 +66,9 @@
      <Compile Include="Assets\Scripts\ThisWeapon.cs" />
      <Compile Include="Assets\Scripts\TurretEnemy.cs" />
      <Compile Include="Assets\Scripts\TurretFire.cs" />
-     <Compile Include="Assets\Scripts\UI\WeaponAmmo.cs" />
-     <Compile Include="Assets\Scripts\UI\WeaponImage.cs" />
-     <Compile Include="Assets\Scripts\UI\WeaponName.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponAmmoUI.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponImageUI.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponNameUI.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

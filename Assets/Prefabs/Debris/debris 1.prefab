@@ -75,12 +75,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocityMaximum: 70
   velocityMinimum: 20
-  rotationMaximum: 2000
-  rotationMinimum: 720
+  rotationMaximum: 1500
+  rotationMinimum: 360
   lengthMaximum: 90
   lengthMinimum: 30
-  killMaximum: 120
-  killMinimum: 20
 --- !u!212 &212913393112421864
 SpriteRenderer:
   m_ObjectHideFlags: 1

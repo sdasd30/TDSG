@@ -5,6 +5,8 @@ using UnityEngine;
 public class PkUpWeapon : MonoBehaviour {
 	public float pickupRadius;
 	public GameObject E;
+	CurrentWeapon playerWeapon;
+	ThisWeapon thisStats;
 	GameObject instatiated ;
 	MvmtBody player;
 	Vector3 playerPosition;
@@ -14,6 +16,8 @@ public class PkUpWeapon : MonoBehaviour {
 	void Start () {
 		pickupRadius = 1;
 		player = FindObjectOfType<MvmtBody> ();
+		playerWeapon = FindObjectOfType<CurrentWeapon> ();
+		thisStats = GetComponent<ThisWeapon> ();
 		
 	}
 	
@@ -29,6 +33,10 @@ public class PkUpWeapon : MonoBehaviour {
 				instatiated = Instantiate (E,m_Position + new Vector3(0,1,0), Quaternion.identity);
 			}
 			inRange = true;
+			if (Input.GetKey ("e")) {
+				Destroy (instatiated);
+				Destroy (this.gameObject);
+			}
 		} else {
 			Destroy (instatiated);
 			inRange = false;

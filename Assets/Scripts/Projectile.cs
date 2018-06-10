@@ -4,9 +4,8 @@ using UnityEngine;
 
 [RequireComponent (typeof (Rigidbody2D))]
 public class Projectile : MonoBehaviour {
+	CurrentWeapon firedFrom;
 	Rigidbody2D m_body;
-	public float speed;
-	public float damage;
 	public bool isAllied;
 	public bool anarchy;
 
@@ -18,9 +17,13 @@ public class Projectile : MonoBehaviour {
 		m_body = GetComponent<Rigidbody2D> ();
 	}
 
+	public void SetWeapon(CurrentWeapon sent){
+		firedFrom = sent;
+	}
+
 	// Update is called once per frame
 	void Update () {
-		m_body.transform.Translate (new Vector2(0f,speed * Time.deltaTime)); //new Vector2 (Mathf.Cos(angle) * speed * Time.deltaTime,Mathf.Sin(angle) * speed * Time.deltaTime));
+		m_body.transform.Translate (new Vector2(0f,firedFrom.speed * Time.deltaTime)); //new Vector2 (Mathf.Cos(angle) * speed * Time.deltaTime,Mathf.Sin(angle) * speed * Time.deltaTime));
 
 	}
 
@@ -31,13 +34,13 @@ public class Projectile : MonoBehaviour {
 		if (other.gameObject.GetComponent<Attackable> () != null) {
 			Attackable a = other.gameObject.GetComponent<Attackable> ();
 			if (a.anarchy) {
-				a.TakeDamage (damage);
+				a.TakeDamage (firedFrom.speed);
 				Destroy (this.gameObject);
 			} else if (isAllied && !a.allied) {
-				a.TakeDamage (damage);
+				a.TakeDamage (firedFrom.speed);
 				Destroy (this.gameObject);
 			} else if (!isAllied && a.allied) {
-				a.TakeDamage (damage);
+				a.TakeDamage (firedFrom.speed);
 				Destroy (this.gameObject);
 			}
 		}

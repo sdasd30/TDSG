@@ -9,9 +9,7 @@ public class Scatter : MonoBehaviour {
 	public float rotationMinimum;
 	public float lengthMaximum;
 	public float lengthMinimum;
-	public float killMaximum;
-	public float killMinimum;
-	float speed,angle,rotation,time,killTime;
+	float speed,angle,rotation,time;
 	bool clockwise;
 	int spentTime;
 	// Use this for initialization
@@ -22,12 +20,11 @@ public class Scatter : MonoBehaviour {
 		rotation = Random.Range (rotationMinimum, rotationMaximum);
 		time = Random.Range (lengthMinimum, lengthMaximum);
 		time = Mathf.Round (time);
-		killTime = Random.Range (killMaximum, killMinimum);
 		spentTime = 0;
 	}
 
 	bool truefalse(float zeroToOne){
-		return (Random.Range (0, 1) <= zeroToOne);
+		return (Random.Range (0f, 1f) <= zeroToOne);
 	}
 
 	// Update is called once per frame
@@ -48,8 +45,8 @@ public class Scatter : MonoBehaviour {
 
 
 		if (spentTime > time / 2) {
-			speed -= speed / killTime;
-			rotation -= rotation / killTime;
+			speed -= speed / (time/2);
+			rotation -= rotation / (time/2);
 		}
 		if (speed < 0)
 			speed = 0;
